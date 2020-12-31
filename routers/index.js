@@ -14,23 +14,6 @@ router.get('/', function (req, res, next) {
             res.write(data);
         }
     })
-
-
-    var apiCall = unirest("GET", "https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/");
-
-    apiCall.headers({
-        "x-rapidapi-key": "e4caefe61cmshc323d646f82f86cp193f10jsn415c9cc518fd",
-        "x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
-        "useQueryString": true
-    });
-
-    apiCall.end(function (result) {
-
-        if (res.error) throw new Error(result.error);
-
-        console.log(result.body);
-
-    });
 });
 
 module.exports = router;

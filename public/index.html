@@ -1,48 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    
-    </script>
-    <title>Hello, world!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI</title>
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
 </head>
-
 <body>
-    <h1>WeatherAPI</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-lg" placeholder="City">
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-lg" placeholder="Country">
-                </div>
-            </div>
-            <div class="col-sm">
-                <button type="button" class="btn btn-secondary btn-lg">Submit</button>
-                
-                <button type="button" class="btn btn-secondary btn-lg" id="btnClick" onclick="getlocation();"
-                    value="run external javascript">My location</button>
-            </div>
-        </div>
+    <div class="input">
+        <input type="text" class="inputValue" placeholder="Input a city"/>
+        <input type="submit" value="Submit" class="button" />
+        <input type="submit" value="MyLocation" class="locationButton" />
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
+    <div class="display">
+        <h1 class="name"></h1>
+        <p class="desc"></p>
+        <p class="temp"></p>
+    </div>
+<script type="text/javascript" src="javascripts/app.js"></script>
 </body>
-<script type="text/javascript"></script>
-
 </html>
