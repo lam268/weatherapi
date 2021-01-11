@@ -1,7 +1,7 @@
 var button = document.querySelector('.button');
 var locationButton = document.querySelector('.locationButton');
 var inputValue = document.querySelector('.inputValue');
-var name = document.querySelector('.name');
+var namecity = document.querySelector('.namecity');
 var desc = document.querySelector('.desc');
 var temp = document.querySelector('.temp');
 
@@ -16,7 +16,7 @@ button.addEventListener('click', function () {
             var tempValue = data['main']['temp'];
             var descValue = data['weather'][0]['description'];
 
-            name.innerHTML = nameValue;
+            namecity.innerHTML = nameValue;
             temp.innerHTML = tempValue;
             desc.innerHTML = descValue;
         })
@@ -28,7 +28,7 @@ locationButton.addEventListener('click', function () {
         .then(response => response.json())
         .then(data => {
             var location = data['country_capital'];
-            console.log(location);
+            console.log(data);
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=96faa58a65872d058e866a79a6561dbc`)
                 .then(response => response.json())
                 .then(data => {
@@ -37,7 +37,7 @@ locationButton.addEventListener('click', function () {
                     var tempValue = data['main']['temp'];
                     var descValue = data['weather'][0]['description'];
 
-                    name.innerHTML = nameValue;
+                    namecity.innerHTML = nameValue;
                     temp.innerHTML = tempValue;
                     desc.innerHTML = descValue;
                 })
